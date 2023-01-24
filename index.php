@@ -25,7 +25,7 @@ class Movie{
         return '<h1>name movie: ' . $this->title . '</h1>'
             . '<h2> movie genre: ' . $this->genre . '</h2>'
             . '<h3> cast: ' . $this-> cast . '</h3>'
-            . '<h3> duration: ' . $this-> convertHour() . '</h3>'
+            . '<h3> duration: ' . $this-> convertHour() . ' hour</h3>'
             . '<h3> anno: ' . $this -> year . '</3>'
             ;
     }
@@ -33,7 +33,7 @@ class Movie{
 
 $movies = [
     $avengersEndGame = new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019),
-    $avatar2 = new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington:', '192', 2022)
+    $avatar2 = new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington', '192', 2022)
 ];
 
 foreach($movies as $movie){
