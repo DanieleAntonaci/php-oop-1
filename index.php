@@ -16,22 +16,27 @@ class Movie{
         $this->year = $year;
     }
 
+    public function convertHour(){
+        return intdiv($this->duration, 60).':'. ($this->duration % 60);
+    }
+
     public function getHtml(){
+
         return '<h1>name movie: ' . $this->title . '</h1>'
             . '<h2> movie genre: ' . $this->genre . '</h2>'
             . '<h3> cast: ' . $this-> cast . '</h3>'
-            . '<h3> duration: ' . $this->duration . '</h3>'
+            . '<h3> duration: ' . $this-> convertHour() . '</h3>'
             . '<h3> anno: ' . $this -> year . '</3>'
             ;
     }
 }
 
-$avengers = new Movie('Avengers', 'fantasy','robert d. junior', '3h', 2019);
-$avatar = new Movie('Avatar', 'fantasy',' drobert. junior', '3,5h', 2022);
+$avengersEndGame = new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019);
+$avatar2 = new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington:', '192', 2022);
 
 $movies = [
-    $avengers,
-    $avatar
+    $avengersEndGame,
+    $avatar2
 ];
 
 foreach($movies as $movie){
