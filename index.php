@@ -5,13 +5,15 @@ class Movie{
     public $genre;
     public $cast;
     public $duration;
+    public $year;
 
-    public function __construct($title, $genre, $cast, $duration)
+    public function __construct($title, $genre, $cast, $duration, $year)
     {
         $this->title =$title;
         $this->genre =$genre;
         $this->cast =$cast;
         $this->duration = $duration;
+        $this->year = $year;
     }
 
     public function getHtml(){
@@ -19,12 +21,20 @@ class Movie{
             . '<h2> movie genre: ' . $this->genre . '</h2>'
             . '<h3> cast: ' . $this-> cast . '</h3>'
             . '<h3> duration: ' . $this->duration . '</h3>'
+            . '<h3> anno: ' . $this -> year . '</3>'
             ;
     }
 }
 
-$movie1 = new Movie('Avengers', 'fantasy','robert d. junior', '3h');
+$avengers = new Movie('Avengers', 'fantasy','robert d. junior', '3h', 2019);
+$avatar = new Movie('Avatar', 'fantasy',' drobert. junior', '3,5h', 2022);
 
-var_dump($movie1);
+$movies = [
+    $avengers,
+    $avatar
+];
 
-echo $movie1->getHtml();
+foreach($movies as $movie){
+    echo $movie->getHtml();
+
+}
