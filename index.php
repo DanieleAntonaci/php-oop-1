@@ -31,12 +31,9 @@ class Movie{
     }
 }
 
-$avengersEndGame = new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019);
-$avatar2 = new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington:', '192', 2022);
-
 $movies = [
-    $avengersEndGame,
-    $avatar2
+    $avengersEndGame = new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019),
+    $avatar2 = new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington:', '192', 2022)
 ];
 
 foreach($movies as $movie){
