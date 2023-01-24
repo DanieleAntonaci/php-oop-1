@@ -32,8 +32,8 @@ class Movie{
 }
 
 $movies = [
-    $avengersEndGame = new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019),
-    $avatar2 = new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington', '192', 2022)
+    new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019),
+    new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington', '192', 2022)
 ];
 
 foreach($movies as $movie){
