@@ -31,12 +31,16 @@ class Movie{
     }
 }
 
+
 $movies = [
-    new Movie('Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019),
-    new Movie('Avatar - La via dell`acqua', 'fantasy',' Sam Worthington', '192', 2022)
+    ['Avengers: Endgame', 'fantasy','Robert Downey Jr., Chris Evans', '181', 2019],
+    ['Avatar - La via dell`acqua', 'fantasy',' Sam Worthington', '192', 2022]
 ];
 
+
+
 foreach($movies as $movie){
-    echo $movie->getHtml();
+    $newMovie = new Movie($movie[0], $movie[1], $movie[2], $movie[3], $movie[4]);
+    echo $newMovie->getHtml();
 
 }
